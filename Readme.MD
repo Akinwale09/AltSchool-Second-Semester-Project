@@ -108,4 +108,90 @@ Create project directory and cd to the project director.
   - Your full bio with every interesting information about you
   - Deploy the HTML page on the server.
 
+  I will be deploying my CV webpage already push to my GitHub account repository. 
 
+![Githuprepo](<images/GitHub repo.png>)
+
+Copy and install my github project link to my ubuntu server using the command: 
+wget https://github.com/Akinwale09/AltSchool-Second-Semester-Project.git
+
+
+![projectlink](images/copyandinstallprojectlink.png)
+
+Copy and install the GitHub zip link: https://github.com/Akinwale09/AltSchool-Second-Semester-Project/archive/refs/heads/main.zip
+
+![Zip link](<images/Zip link.png>)
+
+Confirm the files in the directory using command:
+
+ls -lrt
+
+![lslrt](images/lslrt.png)
+
+To unzip the zip folder use the command below:
+
+apt install unzip
+
+![install](images/installunzip.png)
+
+Unzip the folder main.zip with command:
+unzip main.zip
+
+![unzip](images/unzipmain.png)
+
+to check the file in the directory
+ls -lrt 
+
+change directory using
+cd AltSchool-Second-Semester-Project-main
+
+![cddirectory](images/cdtoprojectfile.png)
+
+ls -lrt
+
+Move all the files from AltSchool-Second-Semester-Project-main to /var/www/html using comaand below:
+
+mv * /var/www/html/
+
+cd /var/www/html/
+
+ls -lrt
+
+systemctl status apache2
+
+systemctl enable apache2
+
+systemctl start apache2
+
+### Networking:
+
+- Configure the server to allow HTTP traffic (port 80).
+Provide the public IP address (or URL if using DNS) so your page can be accessed from any browser.
+
+I edit my inbound security group to make my webpage accessible to all:
+
+![security](images/Inboundsecurity.png)
+
+Let check my web server using the public IP address:
+
+3.83.65.7
+my webpage redering 
+
+![webpage](images/mywebpage.png)
+
+### Bonus Tasks (Optional for Extra Credit):
+- Configure HTTPS for your web server using a free SSL certificate (e.g., Let’s Encrypt).
+
+Change my IP address to resolve to my domain name:
+
+3.83.65.7 => akinwaleidowu.world
+
+I will request for AWS certificate manager and configure A record. 
+
+![certificatemanager](<images/certificate manager.png>)
+
+Configure A rocord and CNAME record
+
+![Arecord](images/Arecord.png)
+
+![cname](images/recordupdated.png)
